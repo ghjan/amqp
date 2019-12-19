@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/streadway/amqp"
+	"github.com/ghjan/amqp"
 )
 
 var (
