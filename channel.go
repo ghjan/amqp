@@ -1591,3 +1591,9 @@ func (ch *Channel) Reject(tag uint64, requeue bool) error {
 		Requeue:     requeue,
 	})
 }
+
+// IsClosed returns true if the channel is marked as closed, otherwise false
+// is returned.
+func (ch *Channel) IsClosed() bool {
+	return atomic.LoadInt32(&ch.closed) == 1
+}
